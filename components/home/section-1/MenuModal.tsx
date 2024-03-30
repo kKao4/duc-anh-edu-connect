@@ -20,7 +20,6 @@ export default function MenuModal({ isOpenMenu, dropdown, handleClose }: MenuMod
   useOnClickOutside(menuRef, handleClose)
 
   return (
-    // @ts-ignore
     <Transition
       in={isOpenMenu}
       mountOnEnter

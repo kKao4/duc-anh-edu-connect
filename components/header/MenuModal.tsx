@@ -33,7 +33,6 @@ export default function MenuModal({ isOpen, handleClose }: MenuModalProps) {
     }
   }, [isOpen, lock, unlock])
   return (
-    // @ts-ignore
     <CSSTransition nodeRef={nodeRef} in={isOpen} timeout={500} classNames={{
       enterActive: "animate-in slide-in-from-right-full duration-500 fill-mode-forwards ease-out",
       exitActive: "animate-out slide-out-to-right-full duration-500 fill-mode-forwards ease-out"
