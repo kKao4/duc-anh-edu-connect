@@ -1,0 +1,21 @@
+<svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Component 286">
+<circle id="Ellipse 2842" opacity="0.2" cx="45.5" cy="45.5" r="45" stroke="url(#paint0_linear_970_14264)"/>
+<circle id="Ellipse 2843" opacity="0.5" cx="45.5011" cy="45.5001" r="30.2432" stroke="url(#paint1_linear_970_14264)"/>
+<circle id="Ellipse 2844" opacity="0.7" cx="45.4997" cy="45.4997" r="13.027" stroke="url(#paint2_linear_970_14264)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_970_14264" x1="45.5" y1="0" x2="45.5" y2="91" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_970_14264" x1="45.5011" y1="14.7568" x2="45.5011" y2="76.2433" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_970_14264" x1="45.4997" y1="31.9727" x2="45.4997" y2="59.0267" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
