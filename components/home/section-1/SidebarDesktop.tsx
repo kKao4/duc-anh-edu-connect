@@ -5,7 +5,7 @@ import SideBarButton from "./SideBarButton"
 
 export default function SidebarDesktop() {
   return (
-    <aside className="grow flex-col outline-2 outline outline-primary-10 rounded-xl hidden md:flex flex-none">
+    <aside className="grow flex-col outline-2 outline outline-primary-10 rounded-xl hidden md:flex flex-none mr-6">
       <strong className="font-bold text-1 leading-1.5 px-6 py-4 text-white bg-linear-5 rounded-t-xl overflow-hidden">Bạn muốn du học ở đâu?</strong>
       {/* side bar buttons */}
       <ul>

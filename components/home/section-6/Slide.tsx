@@ -30,8 +30,8 @@ export default function Slide() {
   }, [])
   return (
     <>
-      <div ref={ref} className="absolute top-16 md:top-[47%] w-[88%] md:w-auto left-1/2 -translate-x-1/2 md:-translate-y-1/2 z-20 flex flex-col md:flex-row gap-2 md:gap-4 items-start">
-        <b className="font-playFairDisplay text-[5rem] leading-[0rem] md:text-8.75 font-bold text-white opacity-50 md:leading-1 -translate-y-[20%]">“</b>
+      <div ref={ref} className="absolute top-16 md:top-[47%] w-[88%] md:w-auto left-1/2 -translate-x-1/2 md:-translate-y-1/2 z-20 flex flex-col md:flex-row items-start">
+        <b className="font-playFairDisplay text-[5rem] leading-[0rem] md:text-8.75 font-bold text-white opacity-50 md:leading-1 -translate-y-[20%] mb-2 md:mb-0 md:mr-4">“</b>
         {section6Students.map((item, i) => {
           if (activeStudent === i) {
             return (
@@ -40,9 +40,9 @@ export default function Slide() {
                 <strong className="text-white text-1 md:text-1.25 font-bold leading-1.2 -tracking-0.01313 md:-translate-x-3.5 block mb-2">- {item.name}</strong>
                 <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5">{item.school}</p>
                 <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5 mb-11 md:mb-[1.81rem]">{item.description}</p>
-                <div className="flex flex-row gap-[0.81rem] items-center">
-                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 bg-white text-primary-40 text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] md:border-2 border-primary-20">Xem chi tiết</button>
-                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 border md:border-2 border-white text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] text-white">Tất cả học sinh</button>
+                <div className="flex flex-row items-center">
+                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 bg-white text-primary-40 text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] md:border-2 border-primary-20 hover-opacity transition-500 mr-[0.81rem]">Xem chi tiết</button>
+                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 border md:border-2 border-white text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] text-white hover:bg-white hover:text-primary-40 transition-500 hover:border-primary-20">Tất cả học sinh</button>
                 </div>
               </article>
             )
@@ -77,11 +77,11 @@ export default function Slide() {
         {section6Students.map(item => {
           return (
             <SwiperSlide key={item.name}>
-              <Image src={item.img} alt="" className="section-6-image-slide" placeholder="blur" />
+              <Image src={item.img} alt={item.alt} className="section-6-image-slide" />
             </SwiperSlide>
           )
         })}
-        <div className="hidden md:flex absolute top-1/3 right-16 flex-row gap-3 items-center z-10">
+        <div className="hidden md:flex absolute top-1/3 right-16 flex-row items-center z-10">
           <SwiperPrevButton />
           <SwiperNextButton />
         </div>

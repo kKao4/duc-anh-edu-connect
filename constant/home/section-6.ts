@@ -10,6 +10,7 @@ interface ISection6Student {
   school: string;
   description: string;
   img: StaticImageData | string;
+  alt: string;
 }
 
 export const section6Students: ISection6Student[] = [
@@ -19,6 +20,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 2",
@@ -26,6 +28,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "Lê Minh",
@@ -33,6 +36,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu học sinh Amsterdam",
     description: "Học bổng toàn phần trường Deakin University ",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 3",
@@ -40,6 +44,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 4",
@@ -47,6 +52,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 5",
@@ -54,6 +60,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 6",
@@ -61,6 +68,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 7",
@@ -68,6 +76,7 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
   {
     name: "John Doe 8",
@@ -75,5 +84,6 @@ export const section6Students: ISection6Student[] = [
     school: "Cựu nhi đồng",
     description: "Học bổng toàn phần trường Deakin University",
     img: student2,
+    alt: "",
   },
 ];

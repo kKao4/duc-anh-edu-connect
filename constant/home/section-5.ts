@@ -11,6 +11,7 @@ interface New {
   title: string;
   description: string;
   img: string | StaticImageData;
+  alt: string;
 }
 
 export interface ISection5News {
@@ -22,10 +23,12 @@ export const section5News: ISection5News = {
   outstanding: {
     id: 9999,
     date: "12 Tháng 12, 2023",
-    title: "Chiến lược du học nhanh - rẻ - hiệu quả tại Anh, Úc, Mỹ, NZ, Canada, Thuỵ Sỹ, Singapore",
+    title:
+      "Chiến lược du học nhanh - rẻ - hiệu quả tại Anh, Úc, Mỹ, NZ, Canada, Thuỵ Sỹ, Singapore Chiến lược du học nhanh - rẻ - hiệu quả tại Anh, Úc, Mỹ, NZ, Canada, Thuỵ Sỹ, Singapore",
     description:
-      "Những lợi ích lớn nhất khi làm hồ sơ du học qua Duc Anh EduConnect là chúng tôi: giúp bạn gạt bỏ hoàn toàn các mối lo về giấy tờ, hồ sơ, thủ tục...",
+      "Những lợi ích lớn nhất khi làm hồ sơ du học qua Duc Anh EduConnect là chúng tôi: giúp bạn gạt bỏ hoàn toàn các mối lo về giấy tờ, hồ sơ, thủ tục Những lợi ích lớn nhất khi làm hồ sơ du học qua Duc Anh EduConnect là chúng tôi: giúp bạn gạt bỏ hoàn toàn các mối lo về giấy tờ, hồ sơ, thủ tục",
     img: newsImage1,
+    alt: "",
   },
   news: [
     {
@@ -34,6 +37,7 @@ export const section5News: ISection5News = {
       title: "Thành công săn học của Đại  số một nước Úc là trải nghiệm như thế nào?",
       description: "",
       img: newsImage2,
+      alt: "",
     },
     {
       id: 1,
@@ -41,6 +45,7 @@ export const section5News: ISection5News = {
       title: "Thành công săn học của Đại  số một nước Úc là trải nghiệm như thế nào?",
       description: "",
       img: newsImage2,
+      alt: "",
     },
     {
       id: 2,
@@ -48,6 +53,7 @@ export const section5News: ISection5News = {
       title: "Đức Anh thông báo: Chính thức thành lập văn phòng tại Melbourne.",
       description: "",
       img: newsImage3,
+      alt: "",
     },
     {
       id: 3,
@@ -55,6 +61,7 @@ export const section5News: ISection5News = {
       title: "Đức Anh thông báo: Chính thức thành lập văn phòng tại Melbourne.",
       description: "",
       img: newsImage3,
+      alt: "",
     },
     {
       id: 4,
@@ -62,6 +69,7 @@ export const section5News: ISection5News = {
       title: "Cách qui đổi điểm GPA: hệ số- hệ chữ: Những điều cần biết!",
       description: "",
       img: newsImage4,
+      alt: "",
     },
     {
       id: 5,
@@ -69,16 +77,31 @@ export const section5News: ISection5News = {
       title: "Cách qui đổi điểm GPA: hệ số- hệ chữ: Những điều cần biết!",
       description: "",
       img: newsImage4,
+      alt: "",
     },
-    { id: 6, date: "", title: "Giới thiệu về Đại học Mỹ: Học bổng đến $22.000", description: "", img: newsImage5 },
-    { id: 7, date: "", title: "Giới thiệu về Đại học Mỹ: Học bổng đến $22.000", description: "", img: newsImage5 },
-    { id: 8, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 9, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 10, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 11, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 12, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 13, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 14, date: "", title: "This is some text", description: "", img: newsImage5 },
-    { id: 15, date: "", title: "This is some text", description: "", img: newsImage5 },
+    {
+      id: 6,
+      date: "",
+      title: "Giới thiệu về Đại học Mỹ: Học bổng đến $22.000",
+      description: "",
+      img: newsImage5,
+      alt: "",
+    },
+    {
+      id: 7,
+      date: "",
+      title: "Giới thiệu về Đại học Mỹ: Học bổng đến $22.000",
+      description: "",
+      img: newsImage5,
+      alt: "",
+    },
+    { id: 8, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 9, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 10, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 11, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 12, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 13, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 14, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
+    { id: 15, date: "", title: "This is some text", description: "", img: newsImage5, alt: "" },
   ],
 };

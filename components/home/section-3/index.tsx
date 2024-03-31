@@ -25,12 +25,13 @@ export default function Section3() {
             <button className="basis-1/2 md:basis-auto px-[1.88rem] h-12 text-0.875 font-bold leading-1.2 rounded-lg text-white bg-linear-5 hover-opacity">
               Về chúng tôi
             </button>
-            <button className="basis-1/2 md:basis-auto ml-4 px-[1.88rem] h-12 text-0.875 font-bold leading-1.2 rounded-lg text-primary-50 outline outline-1 outline-primary-50 hover-opacity transition-500">
+            <button className="relative basis-1/2 md:basis-auto ml-4 px-[1.88rem] h-12 text-0.875 font-bold leading-1.2 rounded-lg text-primary-50 border border-primary-50 hover:text-white hover:border-transparent transition-500 group">
               Liên hệ tư vấn
+              <div className="absolute top-0 left-0 w-full h-full bg-linear-5 -z-10 opacity-0 group-hover:opacity-100 rounded-lg transition-500" />
             </button>
           </div>
         </article>
-        <Image src={section3BackgroundImageMobile1} alt="" className="block md:hidden absolute bottom-0 left-0 w-full object-cover" />
+        <Image src={section3BackgroundImageMobile1} alt="quá trình phát triển cửa Đức Anh" className="block md:hidden absolute bottom-0 left-0 w-full object-cover" />
         {/* phan thu 2: gsap desktop */}
         <GsapDesktop />
         {/* gsap mobile */}
@@ -42,18 +43,17 @@ export default function Section3() {
             sau 24 năm đồng hành cùng
             các học sinh chinh phục ước mơ
           </h1>
-          <button className="flex flex-row gap-3 items-center px-[1.88rem] h-12 outline outline-1 outline-white rounded-lg text-0.875 font-bold leading-1.2 text-white uppercase md:normal-case">
+          <button className="flex flex-row items-center px-[1.88rem] h-12 outline outline-1 outline-white rounded-lg text-0.875 font-bold leading-1.2 text-white uppercase md:normal-case">
             Xem chi tiết
-            <Image src={star} alt="" className="w-4 h-4 hidden md:block" />
           </button>
         </article>
-        <Image src={section3BackgroundImageMobile2} alt="" className="block md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[89%] object-cover" />
+        <Image src={section3BackgroundImageMobile2} alt="quá trình phát triển cửa Đức Anh" className="block md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[89%] object-cover" />
         {/* section 3 bg img */}
-        <Image src={section3BackgroundImageDesktop1} alt="" className="hidden md:block absolute w-full object-cover bottom-0 left-0 -z-20" />
+        <Image src={section3BackgroundImageDesktop1} alt="quá trình phát triển cửa Đức Anh" className="hidden md:block absolute w-full object-cover bottom-0 left-0 -z-20" />
       </div>
       {/* phan thu 3: thanh tuu */}
       <div className="hidden md:block relative h-[105dvh]">
-        <Image src={section3BackgroundImageDesktop3} alt="" className="absolute top-0 left-0 w-full h-full object-cover -z-10" />
+        <Image src={section3BackgroundImageDesktop3} alt="quá trình phát triển cửa Đức Anh" className="absolute top-0 left-0 w-full h-full object-cover -z-10" />
         <GsapPin />
         <div className="absolute left-1/2 top-0 z-20">
           <div className="grid grid-cols-2 gap-x-[1.69rem] gap-y-[2.19rem]">

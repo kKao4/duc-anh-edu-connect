@@ -24,7 +24,7 @@ export const section2TableData: ISection2TableData[] = [
     time: "10h-12h",
     location: "TP.HCM",
     country: "Thụy Sỹ",
-    event: "Lên kế hoạch du học & săn học bổng cùng chuyên gia",
+    event: "Lên kế hoạch du học & săn học bổng cùng chuyên gia Lên kế hoạch du học & săn học bổng cùng chuyên gia Lên kế hoạch du học & săn học bổng cùng chuyên gia",
     href: "/",
   },
   {
@@ -78,7 +78,7 @@ export const section2TableData: ISection2TableData[] = [
     time: "10h-12h",
     location: "online",
     country: "Nhiều nước",
-    event: "UAL #1 về đào tạo Thiết kế- Kiến trúc- Nghệ thuật",
+    event: "UAL #1 về đào tạo Thiết kế- Kiến trúc- Nghệ thuật UAL #1 về đào tạo Thiết kế- Kiến trúc- Nghệ thuật UAL #1 về đào tạo Thiết kế- Kiến trúc- Nghệ thuật",
     href: "/",
   },
   {

@@ -29,22 +29,22 @@ export default function FindSchoolDeco() {
   }, [])
   return (
     <div className="relative md:w-[29.8125rem] md:h-[35.5rem] md:overflow-hidden mt-8 md:mt-0 w-screen -ml-4 md:ml-0 rounded-lg">
-      <Image src={findSchoolDesktop} alt="find-school" className="hidden md:block w-full h-full object-cover " />
+      <Image src={findSchoolDesktop} alt="tìm trường cùng Đức Anh" className="hidden md:block w-full h-full object-cover " />
       <div className="absolute w-full h-[110%] top-0 left-0 overflow-x-hidden">
-        <Image ref={glassMirrorRef} src={glassMirror} alt="" className="block md:hidden absolute bottom-10 right-4 w-[2.44rem] h-[2.6rem] z-10" />
+        <Image ref={glassMirrorRef} src={glassMirror} alt="tìm trường cùng Đức Anh" className="block md:hidden absolute bottom-10 right-4 w-[2.44rem] h-[2.6rem] z-10" />
       </div>
       <div className="absolute bottom-0 right-0 w-[23.75rem] h-[6.25rem] group cursor-pointer">
-        <Image src={union} alt="" className="absolute bottom-0 right-0 hidden md:block object-cover w-[23.75rem] h-[6.25rem]" />
+        <Image src={union} alt="tìm trường cùng Đức Anh" className="absolute bottom-0 right-0 hidden md:block object-cover w-[23.75rem] h-[6.25rem]" />
         <div className="hidden md:block absolute bottom-0 right-[7.5rem] w-[16.25rem] group-hover:w-[18rem] py-[1.25rem] pl-10 bg-linear-6 transition-500 text-0.875 text-white font-semibold leading-1.2 -tracking-0.0025 rounded-2xl cursor-pointer">
           <p>TÌM TRƯỜNG CÙNG ĐỨC ANH</p>
         </div>
-        <Image src={arrowRight} alt="" className="hidden md:block absolute w-5 h-5 transition-500 top-[60%] right-[30%] opacity-0 group-hover:opacity-100 " />
-        <Image src={world} alt="" className="hidden md:block absolute bottom-1 -right-2 w-[5.5rem] h-[5.5rem] group-hover:opacity-0 transition-500" />
-        <Image src={worldHover} alt="" className="hidden md:block absolute bottom-1 -right-2 w-[5.5rem] h-[5.5rem] opacity-0 group-hover:opacity-100 transition-500" />
-        <Image ref={glassRef} src={glass} alt="" className="hidden md:block absolute bottom-12 right-6 w-[3.75rem] h-[4rem]" />
+        <Image src={arrowRight} alt="arrow right icon" className="hidden md:block absolute w-5 h-5 transition-500 top-[60%] right-[30%] opacity-0 group-hover:opacity-100 " />
+        <Image src={world} alt="tìm trường cùng Đức Anh" className="hidden md:block absolute bottom-1 -right-2 w-[5.5rem] h-[5.5rem] group-hover:opacity-0 transition-500" />
+        <Image src={worldHover} alt="tìm trường cùng Đức Anh" className="hidden md:block absolute bottom-1 -right-2 w-[5.5rem] h-[5.5rem] opacity-0 group-hover:opacity-100 transition-500" />
+        <Image ref={glassRef} src={glass} alt="tìm trường cùng Đức Anh" className="hidden md:block absolute bottom-12 right-6 w-[3.75rem] h-[4rem]" />
       </div>
-      <Image src={findSchoolMobile} alt="find-school" className="block md:hidden w-full h-full object-cover" />
-      <Image src={findSchoolButtonMobile} alt="" className="block md:hidden absolute bottom-0 right-0 translate-y-1/4 w-[15.5rem] h-[4.5rem]" />
+      <Image src={findSchoolMobile} alt="tìm trường cùng Đức Anh" className="block md:hidden w-full h-full object-cover" />
+      <Image src={findSchoolButtonMobile} alt="tìm trường cùng Đức Anh" className="block md:hidden absolute bottom-0 right-0 translate-y-1/4 w-[15.5rem] h-[4.5rem]" />
     </div>
   )
 }

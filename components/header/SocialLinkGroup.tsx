@@ -11,15 +11,15 @@ interface SocialLinkGroupProps {
 
 export default function SocialLinkGroup({ className }: SocialLinkGroupProps) {
   return (
-    <div className={clsx("flex flex-row items-center gap-3 ml-12", className)}>
+    <div className={clsx("flex flex-row items-center ml-12", className)}>
       <Link href="/">
-        <Image src={headerFacebook} alt="facebook-svg" className="size-6 hover-opacity" />
+        <Image src={headerFacebook} alt="facebook" className="size-6 hover-opacity mr-3" />
       </Link>
       <Link href="/">
-        <Image src={headerX} alt="X-svg" className="size-6 hover-opacity" />
+        <Image src={headerX} alt="X" className="size-6 hover-opacity mr-3" />
       </Link>
       <Link href="/">
-        <Image src={headerYoutube} alt="youtube-svg" className="size-6 hover-opacity" />
+        <Image src={headerYoutube} alt="youtube" className="size-6 hover-opacity" />
       </Link>
     </div>
   )

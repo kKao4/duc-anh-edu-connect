@@ -8,7 +8,7 @@ export default function HeaderMobile() {
     <header className="sticky top-0 p-3 flex items-center flex-row flex-nowrap md:hidden z-40 bg-white">
       {/* logo */}
       <Link href="/">
-        <Image src={headerLogoMobile}  alt="logo" className="w-28 h-8" priority />
+        <Image src={headerLogoMobile}  alt="Duc Anh EduConnect" className="w-28 h-8" priority />
       </Link>
       {/* hamburger menu */}
       <HamburgerBar />

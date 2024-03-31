@@ -46,7 +46,7 @@ export default function TableRow({ isActive, href, date, time, location, country
         </span>
       </td>
       <td className="border md:border-0 border-table">
-        <span className={clsx("p-3 md:p-0 text-0.75 md:text-0.875 font-semibold leading-1.5 text-grayscaletext-40 block", {
+        <span className={clsx("p-3 md:p-0 text-0.75 md:text-0.875 font-semibold leading-1.5 text-grayscaletext-40 line-clamp-2", {
           "md:text-primary-40": !isActive,
           "md:text-secondary-50": isActive
         })}>
@@ -59,7 +59,7 @@ export default function TableRow({ isActive, href, date, time, location, country
         </Link>
         <Link href={href} className=" md:hidden text-0.75 text-primary-40 font-semibold leading-1.3 flex flex-row gap-[0.38rem] p-3">
           Xem chi tiết
-          <Image src={arrowRight} alt="arrow-right" />
+          <Image src={arrowRight} alt="Xem chi tiết" />
         </Link>
       </td>
     </tr>

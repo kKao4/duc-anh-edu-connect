@@ -15,21 +15,21 @@ export default function GsapMobile() {
   }, [])
   return (
     <div ref={ref} className="block md:hidden absolute top-[69rem] left-0 z-10 overflow-visible">
-      <div className="flex flex-row items-center gap-3 mb-4 ml-3">
+      <div className="flex flex-row items-center [&_*]:mr-3 mb-4 ml-3">
         <MobileBadge>Chuyên nghiệp</MobileBadge>
         <MobileBadge>Minh bạch</MobileBadge>
         <MobileBadge>Hiệu quả</MobileBadge>
         <MobileBadge>Chuyên nghiệp</MobileBadge>
         <MobileBadge>Đồng hành xuyên suốt</MobileBadge>
       </div>
-      <div className="flex flex-row items-center gap-3 ml-3 mb-4">
+      <div className="flex flex-row items-center [&_*]:mr-3 ml-3 mb-4">
         <MobileBadge>Hiệu quả</MobileBadge>
         <MobileBadge>Chuyên nghiệp</MobileBadge>
         <MobileBadge>Hiệu quả</MobileBadge>
         <MobileBadge>Đồng hành xuyên suốt</MobileBadge>
         <MobileBadge>Minh bạch</MobileBadge>
       </div>
-      <div className="flex flex-row items-center gap-3 ml-3">
+      <div className="flex flex-row items-center [&_*]:mr-3 ml-3">
         <MobileBadge>Đồng hành xuyên suốt</MobileBadge>
         <MobileBadge>Chuyên nghiệp</MobileBadge>
         <MobileBadge>Minh bạch</MobileBadge>

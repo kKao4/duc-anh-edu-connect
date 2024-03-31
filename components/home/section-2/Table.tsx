@@ -10,9 +10,14 @@ import useSWR from "swr"
 import clsx from "clsx"
 import FindSchoolDeco from "./FindSchoolDeco"
 
-export default function Table() {
+interface TableProps {
+  tableSkeleton: React.ReactNode,
+  paginationSkeleton: React.ReactNode
+}
+
+export default function Table({ tableSkeleton, paginationSkeleton }: TableProps) {
   const [page, setPage] = useState(0)
-  const { data: tableData, error } = useSWR<ISection2TableDataResponse>(`/api/section-2?page=${page}`, fetcher)
+  const { data: tableData, isLoading } = useSWR<ISection2TableDataResponse>(`/api/section-2?page=${page}`, fetcher)
 
   return (
     <>
@@ -44,10 +49,10 @@ export default function Table() {
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row items-start gap-[1.38rem] p-px mb-4 w-full">
+      <div className="flex flex-col md:flex-row items-stretch p-px mb-4 w-full">
         {/* table */}
-        <div className="w-full md:w-[66.5%] overflow-auto p-px">
-          <table className="rounded-xl overflow-hidden table-auto md:outline md:outline-1 outline-primary-50 min-w-max mb-1 w-full">
+        <div className="w-full md:w-[66.5%] p-px overflow-auto md:overflow-visible mb-[1.38rem] md:mb-0 md:mr-[1.38rem]">
+          <table className="rounded-xl overflow-hidden table-auto md:outline md:outline-1 outline-primary-50 min-w-max mb-1 w-full h-full">
             <thead>
               <tr className="bg-primary-40 md:bg-linear-5">
                 <th className="text-0.875 hidden md:table-cell text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 px-3 py-3 md:py-2 md:px-4 md:first-of-type:pl-6 md:last-of-type:pr-6 md:w-[9.125rem] border-x md:border-0 border-r-white">Ngày - Giờ</th>
@@ -55,13 +60,14 @@ export default function Table() {
                 <th className="text-0.875 block md:hidden text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 px-3 py-3 border-x md:border-0 border-r-white">Giờ</th>
                 <th className="text-0.875 text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 md:w-[7rem] px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6  border-x md:border-0 border-r-white">Địa điểm</th>
                 <th className="text-0.875 text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 md:w-[8.375rem] px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6  border-x md:border-0 border-r-white">Đất nước</th>
-                <th className="text-0.875 text-white md:text-1 font-semibold leading-1.3 md:leading-1.5 px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6 text-center md:text-start  border-x md:border-0 border-r-white">Sự kiện</th>
+                <th className="text-0.875 text-white md:text-1 font-semibold leading-1.3 md:leading-1.5 px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6 text-center md:text-start border-x md:border-0 md:w-[27.2rem] border-r-white">Sự kiện</th>
                 <th className="hidden md:table-cell text-0.875 text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 md:w-[9rem] px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6  border-x md:border-0 border-r-white">Chi tiết và đăng ký</th>
                 <th className="table-cell md:hidden text-0.875 text-white text-center md:text-1 font-semibold leading-1.3 md:leading-1.5 md:w-[9rem] px-3 py-3 md:py-2 md:px-4 first-of-type:pl-6 last-of-type:pr-6 border-x md:border-0 border-r-white">Chi tiết</th>
               </tr>
             </thead>
+            {/* table data fetched */}
             <tbody>
-              {error ? <p>Something Wrong</p> : (
+              {isLoading ? tableSkeleton : (
                 <>
                   {tableData?.data.map(item => {
                     return (
@@ -77,9 +83,9 @@ export default function Table() {
             </tbody>
           </table>
         </div>
-        {/* pagination */}
-        <div className="flex flex-row md:hidden justify-center items-center mx-auto">
-          <div className="flex flex-row gap-2 items-center">
+        {/* pagination mobile */}
+        {isLoading ? paginationSkeleton : (
+          <div className="flex flex-row md:hidden justify-center items-center mx-auto [&_button]:mx-1">
             {tableData?.totalPage && (
               <>
                 {Array.from({ length: tableData.totalPage }, (_, i) => i + 1).map(item => {
@@ -100,9 +106,9 @@ export default function Table() {
               </>
             )}
           </div>
-        </div>
+        )}
         <FindSchoolDeco />
-      </div>
+      </div >
     </>
   )
 }

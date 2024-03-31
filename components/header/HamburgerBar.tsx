@@ -14,7 +14,7 @@ export default function HamburgerBar() {
         className="ml-auto w-8 h-8 rounded-full bg-elevation-20 flex items-center justify-center"
         onClick={() => setIsOpen(prevState => !prevState)}
       >
-        <Image src={hamburgerBar} priority alt="hamburger" className="w-4 h-4" />
+        <Image src={hamburgerBar} priority alt="mở menu" className="w-4 h-4" />
       </button>
       <DynamicMenuModal isOpen={isOpen} handleClose={() => setIsOpen(false)} />
     </>

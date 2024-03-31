@@ -13,10 +13,10 @@ export default function LangSwitch() {
 
   return (
     <>
-      <div className="flex flex-row items-center gap-3 ml-6">
+      <div className="flex flex-row items-center ml-6">
         {/* vn btn */}
         <button
-          className={cn("w-[1.125rem] h-[1.125rem] rounded-full overflow-hidden hover-opacity", {
+          className={cn("w-[1.125rem] h-[1.125rem] rounded-full overflow-hidden hover-opacity mr-3", {
             "grayscale": lang !== "vn"
           })}
           onClick={async () => {
@@ -25,7 +25,7 @@ export default function LangSwitch() {
             alert(data.message)
           }}
         >
-          <Image src={vietLang} alt="vietnam-lang" className="w-full h-full object-cover" />
+          <Image src={vietLang} alt="tiếng việt" className="w-full h-full object-cover" />
         </button>
         {/* en btn */}
         <button
@@ -38,7 +38,7 @@ export default function LangSwitch() {
             alert(data.message)
           }}
         >
-          <Image src={englishLang} alt="english-lang" className="w-full h-full object-cover" />
+          <Image src={englishLang} alt="tiếng anh" className="w-full h-full object-cover" />
         </button>
       </div>
     </>

@@ -21,16 +21,16 @@ export default function Accordion({ text, children }: AccordionProps) {
   }, [isOpenAccordion])
   return (
     <>
-      <div className="first-of-type:mt-0 mt-3">
-        <button className="flex flex-row w-full gap-3 items-center text-0.875 font-bold leading-1.2 uppercase text-primary-60 mb-3" onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
+      <div className="first-of-type:mt-0 mt-3 mb-2 last:mb-0">
+        <button className="flex flex-row w-full items-center text-0.875 font-bold leading-1.2 uppercase text-primary-60 mb-3" onClick={() => setIsOpenAccordion(!isOpenAccordion)}>
           {text}
-          <Image src={arrowDown} alt="" className="size-2.5 transition-500" style={isOpenAccordion ? { transform: "rotateX(180deg)" } : undefined} />
+          <Image src={arrowDown} alt="arrow icon" className="size-2.5 transition-500 ml-3" style={isOpenAccordion ? { transform: "rotateX(180deg)" } : undefined} />
         </button>
-        <div ref={divRef} className="flex flex-col gap-3 overflow-hidden max-h-0 transition-all duration-500 ease-default">
+        <div ref={divRef} className="flex flex-col overflow-hidden max-h-0 transition-all duration-500 ease-default">
           {children}
         </div>
       </div>
-      <div className="w-full h-[0.0625rem] bg-[#F1F3F7]" />
+      <div className="w-full h-[0.0625rem] bg-[#F1F3F7] mb-2 last:mb-0" />
     </>
   )
 }

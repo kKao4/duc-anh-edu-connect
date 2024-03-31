@@ -10,7 +10,7 @@ const DynamicMenuModal = dynamic(() => import("./MenuModal"))
 interface Section1MobileLinkProps extends ISideBarButton {
 }
 
-export default function Section1MobileLink({ mobileThumb, text, dropdown, href }: Section1MobileLinkProps) {
+export default function Section1MobileLink({ mobileThumb, text, dropdown, href, alt }: Section1MobileLinkProps) {
   const router = useRouter()
   const [isOpenMenu, setIsOpenMenu] = useState(false)
 
@@ -27,7 +27,7 @@ export default function Section1MobileLink({ mobileThumb, text, dropdown, href }
         <strong className="text-0.75 font-bold leading-1 tracking-0.0075 capitalize text-primary-70">
           {text}
         </strong>
-        <Image src={mobileThumb} alt="" className="ml-auto rounded w-[1.75rem] h-[1.75rem]"  />
+        <Image src={mobileThumb} alt={alt} className="ml-auto rounded w-[1.75rem] h-[1.75rem]" />
       </button>
       {/* menu */}
       {dropdown && (

@@ -31,7 +31,7 @@ export default function TabContentMobile({ children, isActive, className, caretP
     <div ref={divRef} className={clsx("relative col-span-2 max-h-0 overflow-hidden transition-500", {
       "py-3": isActive,
     }, className)}>
-      <Image src={triangle} alt="" className={clsx("absolute top-5 right-[4.5rem] -translate-y-full size-[1.3125rem] -z-10 transition-500", {
+      <Image src={triangle} alt="triangle icon" className={clsx("absolute top-5 right-[4.5rem] -translate-y-full size-[1.3125rem] -z-10 transition-500", {
         "right-[4.5rem]": caretPosition === "right",
         "left-[4.5rem]": caretPosition === "left",
         "h-0": !isActive

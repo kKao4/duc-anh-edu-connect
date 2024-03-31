@@ -11,15 +11,15 @@ interface FooterSocialLinkGroupProps {
 
 export default function FooterSocialLinkGroup({ className }: FooterSocialLinkGroupProps) {
   return (
-    <div className={clsx("flex flex-row gap-3 items-center", className)}>
+    <div className={clsx("flex flex-row [&_a]:mr-3 items-center", className)}>
       <Link href="/" className="hover-opacity">
-        <Image src={facebook} alt="" className="size-6" />
+        <Image src={facebook} alt="facebook" className="size-6" />
       </Link>
       <Link href="/" className="hover-opacity">
-        <Image src={X} alt="" className="size-6" />
+        <Image src={X} alt="X" className="size-6" />
       </Link>
       <Link href="/" className="hover-opacity">
-        <Image src={youtube} alt="" className="size-6" />
+        <Image src={youtube} alt="youtube" className="size-6" />
       </Link>
     </div>
   )

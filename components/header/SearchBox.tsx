@@ -25,7 +25,7 @@ export default function SearchBox() {
           onChange={(e) => setSearchValue(e.target.value)}
         />
         <button className="p-[0.62rem] flex-none bg-primary-5">
-          <Image src={searchIcon} alt="search-icon" className="w-[1.5rem] h-[1.5rem]"  />
+          <Image src={searchIcon} alt="tìm kiếm" className="w-[1.5rem] h-[1.5rem]"  />
         </button>
       </form>
     </>

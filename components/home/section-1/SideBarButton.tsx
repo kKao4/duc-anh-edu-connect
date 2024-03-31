@@ -13,7 +13,7 @@ interface SideBarButtonProps extends ISideBarButton {
 export default function SideBarButton({ thumb, imageThumb, backgroundStyle, text, canDropdown = false, isAsiaCountry = false, alt, children, href, isLastChild }: SideBarButtonProps) {
   return (
     <li className="relative px-6 group cursor-default last-of-type:rounded-b-xl">
-      <div className={cn("relative flex py-2 flex-row flex-nowrap items-center gap-4", {
+      <div className={cn("relative flex py-2 flex-row flex-nowrap items-center", {
         "border-b border-primary-60/20": !isLastChild
       })}>
         {/* country thumb */}
@@ -27,7 +27,7 @@ export default function SideBarButton({ thumb, imageThumb, backgroundStyle, text
         <strong className="absolute top-1/2 -translate-y-1/2 left-[4.25rem] text-primary-60 group-hover:text-white transition-500 text-0.875 font-bold leading-1 tracking-0.01313 uppercase z-10">{text}</strong>
 
         {/* arrow dropdown */}
-        {canDropdown && <Image src={arrowRight} alt="arrow-right" className="w-5 h-5 flex-none ml-auto" />}
+        {canDropdown && <Image src={arrowRight} alt="arrow icon" className="w-5 h-5 flex-none ml-auto" />}
       </div>
 
       {/* bg image hover */}

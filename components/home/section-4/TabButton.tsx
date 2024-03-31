@@ -23,7 +23,7 @@ export default function TabButton({ isActive, styleTitle, text, handleOnClick }:
         </strong>
       </button>
       {/* active button */}
-      <Image src={tabButtonActive} alt="" className={clsx("absolute -top-3.5 -left-2 w-full scale-[1.3] transition-500 opacity-0", { "opacity-100": isActive })} />
+      <Image src={tabButtonActive} alt={text} className={clsx("absolute -top-3.5 -left-2 w-full scale-[1.3] transition-500 opacity-0", { "opacity-100": isActive })} />
     </div>
   )
 }

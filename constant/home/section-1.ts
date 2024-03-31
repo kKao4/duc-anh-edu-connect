@@ -62,7 +62,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: englandThumb,
     mobileThumb: englandThumbMobile,
     imageThumb: englandImageThumb,
-    alt: "england",
+    alt: "Anh Quốc",
     backgroundStyle: "linear-gradient(to right, #294581 0%, #294581 68.45%, rgba(38, 69, 145, 0.00) 100%)",
     text: "Anh Quốc",
     dropdown: {
@@ -120,7 +120,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: australiaThumb,
     mobileThumb: australiaThumbMobile,
     imageThumb: australiaImageThumb,
-    alt: "australia",
+    alt: "Australia",
     backgroundStyle: "linear-gradient(to right, #092485 0%, #072283 68.45%, rgba(38, 69, 145, 0.00) 100%)",
     text: "Australia",
     dropdown: {
@@ -178,7 +178,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: newZealandThumb,
     mobileThumb: newZealandThumbMobile,
     imageThumb: newZealandImageThumb,
-    alt: "new-zealand",
+    alt: "New Zealand",
     backgroundStyle: "linear-gradient(to right, #092485 0%, #072283 68.45%, rgba(38, 69, 145, 0.00) 100%)",
     text: "New Zealand",
     dropdown: {
@@ -236,7 +236,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: canadaThumb,
     mobileThumb: canadaThumbMobile,
     imageThumb: canadaImageThumb,
-    alt: "canada",
+    alt: "Canada",
     backgroundStyle: "linear-gradient(to right, #EC0616 0%, #F00416 68.45%, rgba(239, 5, 22, 0.00) 100%)",
     text: "Canada",
     dropdown: {
@@ -294,7 +294,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: usaThumb,
     mobileThumb: usaThumbMobile,
     imageThumb: americaImageThumb,
-    alt: "america",
+    alt: "America",
     backgroundStyle: "linear-gradient(to right, #0E3565 16.24%, #C00314 68.45%, rgba(191, 3, 20, 0.00) 100%)",
     text: "America",
     dropdown: {
@@ -352,7 +352,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: singaporeThumb,
     mobileThumb: singaporeThumbMobile,
     imageThumb: singaporeImageThumb,
-    alt: "singapore",
+    alt: "Singapore",
     backgroundStyle: "linear-gradient(to right, #0E3565 16.24%, #C00314 68.45%, rgba(191, 3, 20, 0.00) 100%)",
     text: "Singapore",
     dropdown: {
@@ -410,7 +410,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: switzerlandThumb,
     mobileThumb: switzerlandThumbMobile,
     imageThumb: switzerlandImageThumb,
-    alt: "switzerland",
+    alt: "Thuỵ Sỹ",
     backgroundStyle: "linear-gradient(to right, #D80210 0%, #C0000E 68.45%, rgba(212, 6, 19, 0.00) 100%)",
     text: "Thuỵ Sỹ",
     dropdown: {
@@ -468,7 +468,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: asiaThumb,
     mobileThumb: asiaThumbMobile,
     imageThumb: asiaImageThumb,
-    alt: "asia",
+    alt: "Các nước châu Á",
     backgroundStyle: "linear-gradient(to right, #3468CD 0%, #3468CD 68.45%, rgba(52, 104, 205, 0.00) 100%)",
     text: "Các nước châu Á",
     isAsiaCountry: true,
@@ -527,7 +527,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: euroThumb,
     mobileThumb: euroThumbMobile,
     imageThumb: euroImageThumb,
-    alt: "euro",
+    alt: "Các nước châu Âu",
     backgroundStyle: " linear-gradient(to right, #002D88 0%, #012E89 68.45%, rgba(0, 46, 134, 0.00) 100%)",
     text: "Các nước châu Âu",
     dropdown: {
@@ -585,7 +585,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: heTetThumb,
     mobileThumb: heTetThumbMobile,
     imageThumb: heTetImageThumb,
-    alt: "tet",
+    alt: "Du học Hè - Tết",
     backgroundStyle: "linear-gradient(to right, #BC151B 0%, #BC151B 68.45%, rgba(220, 26, 34, 0.00) 100%)",
     text: "Du học Hè - Tết",
     href: "/404",
@@ -594,7 +594,7 @@ export const sideBarButtons: ISideBarButton[] = [
     thumb: giaoLuuVanHoaThumb,
     mobileThumb: giaoLuuVanHoaThumbMobile,
     imageThumb: giaoLuuVanHoaImageThumb,
-    alt: "giao-luu-van-hoa",
+    alt: "Giao lưu văn hoá",
     backgroundStyle: "linear-gradient(to right, #3B85DE 0%, #3B85DE 68.45%, rgba(61, 135, 224, 0.00) 100%)",
     text: "Giao lưu văn hoá",
     href: "/404",

@@ -34,8 +34,8 @@ export default function Slide() {
       {section7Flags.map((item, i) => {
         return (
           <SwiperSlide key={i} className="section-7-slide">
-            <div key={item.text} className="flex flex-col md:px-[3.19rem] py-6 items-center gap-3 flex-none">
-              <Image src={item.flag} alt="" className="size-[3.625rem]" />
+            <div key={item.text} className="flex flex-col md:px-[3.19rem] py-6 items-center flex-none">
+              <Image src={item.flag} alt={item.text} className="size-[3.625rem] mb-3" />
               <span className="text-primary-60 text-1 md:text-1.25 font-medium md:font-semibold leading-1.5 tracking-[-0.0125rem] w-max">
                 {item.text}
               </span>

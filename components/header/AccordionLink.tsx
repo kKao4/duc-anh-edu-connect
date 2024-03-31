@@ -11,12 +11,12 @@ interface AccordionLinkProps extends React.ComponentProps<typeof Link> {
 export default function AccordionLink({ isActive, children, ...props }: AccordionLinkProps) {
   // TODO: close menu modal when clicked link
   return (
-    <Link {...props} className={clsx("flex flex-row items-center text-0.875", {
+    <Link {...props} className={clsx("flex flex-row items-center text-0.875 mb-3 last:mb-0", {
       "leading-1.2 font-bold text-primary-60": isActive,
       "leading-1.7 text-grayscaletext-40": !isActive
     })}>
       {children}
-      {isActive && <Image src={checkMark} alt="" className="size-5 ml-auto" />}
+      {isActive && <Image src={checkMark} alt="checkmark icon" className="size-5 ml-auto" />}
     </Link>
   )
 }

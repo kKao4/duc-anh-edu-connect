@@ -7,7 +7,7 @@ import Section7 from "@/components/home/section-7";
 import Section4 from "@/components/home/section-4";
 import Section5 from "@/components/home/section-5";
 
-// TODO: optimize image
+// TODO: ADD IMAGE DEFAULT AND HREF DEFAULT
 
 export default function Home() {
   return (

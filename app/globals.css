@@ -36,7 +36,7 @@ html {
   }
 
   .hover-opacity {
-    @apply hover:opacity-60 transition-opacity duration-500 ease-out;
+    @apply hover:opacity-65 transition-opacity duration-500 ease-out;
   }
 
   .transition-400 {

@@ -50,9 +50,9 @@ export default function Union({ children, className, isActive, handleOnClick, st
           onClick={handleOnClick}
         />
         {/* btn bg not active */}
-        <Image src={union} alt="box-content" className="w-[22rem] h-auto" />
+        <Image src={union} alt="dịch vụ tại Đức Anh" className="w-[22rem] h-auto" />
         {/* btn bg active */}
-        <Image src={unionActive} alt="box-content" className={clsx("absolute top-0 left-0 w-[22rem] h-auto  transition-500", {
+        <Image src={unionActive} alt="dịch vụ tại Đức Anh" className={clsx("absolute top-0 left-0 w-[22rem] h-auto  transition-500", {
           "opacity-0 peer-hover:opacity-100": !isActive
         })} />
         {/* title */}
@@ -61,15 +61,19 @@ export default function Union({ children, className, isActive, handleOnClick, st
         </p>
         {/* deco btn */}
         <div className="absolute top-[16%] left-[45%] z-10 w-14 h-14">
-          <Image ref={firstEllipse} src={ellipse2842} alt="" className={clsx("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2.2rem] h-[2.2rem] transition-500")} />
-          <Image src={ellipse2842Active} alt="" className={clsx("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2.2rem] h-[2.2rem] transition-500",
+          <Image ref={firstEllipse} src={ellipse2842} alt="dịch vụ tại Đức Anh" className={clsx("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2.2rem] h-[2.2rem] transition-500")} />
+          <Image src={ellipse2842Active} alt="dịch vụ tại Đức Anh" className={clsx("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2.2rem] h-[2.2rem] transition-500",
             { "opacity-100": isActive, "opacity-0": !isActive })} />
-          <Image ref={secondEllipse} src={ellipse2843} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5rem] h-[1.5rem]" />
-          <Image ref={thirdEllipse} src={ellipse2844} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[0.8rem] h-[0.8rem]" />
-          <Image src={cursorTraced} alt="" className="absolute top-1/2 left-1/2 w-[1.1rem] h-[1.1rem]" />
+          <Image ref={secondEllipse} src={ellipse2843} alt="dịch vụ tại Đức Anh" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5rem] h-[1.5rem]" />
+          <Image ref={thirdEllipse} src={ellipse2844} alt="dịch vụ tại Đức Anh" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[0.8rem] h-[0.8rem]" />
+          <Image src={cursorTraced} alt="dịch vụ tại Đức Anh" className="absolute top-1/2 left-1/2 w-[1.1rem] h-[1.1rem]" />
         </div>
         {/* content */}
-        <div ref={contentRef} className="absolute top-[40%] left-6 w-[30.75rem] py-6 px-8 bg-white rounded-2xl opacity-0">
+        <div
+          ref={contentRef}
+          className="absolute top-[40%] left-6 w-[30.75rem] py-6 px-8 bg-white rounded-2xl opacity-0"
+          style={{ filter: "drop-shadow(42px 85px 57px rgba(158, 158, 158, 0.05)) drop-shadow(74px 151px 67px rgba(158, 158, 158, 0.01))" }}
+        >
           <div className="absolute top-0.5 left-auto -translate-y-1/2 rounded w-6 h-6 rotate-45 bg-white" />
           <p className="text-1 text-grayscaletext-80 font-medium leading-1.5">
             {content}

@@ -40,15 +40,15 @@ export default function MenuModal({ isOpenMenu, dropdown, handleClose }: MenuMod
     >
       <div ref={layoutRef} className="fixed top-0 left-0 w-full h-screen bg-black/50 z-50">
         <nav ref={menuRef} className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-primary-50 p-3 w-full rounded-t-2xl">
-          <div className="px-3 py-[0.88rem] flex flex-row gap-[0.38rem] items-center bg-white rounded-xl">
-            <Image src={documentInformation} alt="" className="w-4 h-4" />
+          <div className="px-3 py-[0.88rem] flex flex-row items-center bg-white rounded-xl">
+            <Image src={documentInformation} alt="document icon" className="w-4 h-4 mr-[0.38rem]" />
             <span className="text-primary-50 text-0.75 font-semibold leading-1.2">{dropdown?.title}</span>
-            <Image src={checkmark} alt="checkmark" className="w-5 h-5 ml-auto" />
+            <Image src={checkmark} alt="checkmark icon" className="w-5 h-5 ml-auto" />
           </div>
           {dropdown?.dropdowns.map((item) => {
             return (
-              <Link key={item.text} href={item.href} className="px-3 py-[0.88rem] flex flex-row gap-2 items-center rounded-xl">
-                <Image src={item.icon} alt="" className="w-4 h-4" />
+              <Link key={item.text} href={item.href} className="px-3 py-[0.88rem] flex flex-row items-center rounded-xl">
+                <Image src={item.icon} alt={item.text} className="w-4 h-4 mr-2" />
                 <span className="text-white text-0.75 font-semibold leading-1.2">{item.text}</span>
               </Link>
             )
