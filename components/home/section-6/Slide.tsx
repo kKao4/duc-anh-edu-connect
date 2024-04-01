@@ -1,13 +1,12 @@
 "use client"
 
-import { section6Students } from "@/constant/home/section-6"
+import { ISection6Student, section6Students } from "@/constant/home/section-6"
 import { Pagination } from "swiper/modules"
 import { SwiperSlide, Swiper } from "swiper/react"
 import SwiperNextButton from "./SwiperNextButton"
 import SwiperPrevButton from "./SwiperPrevButton"
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { createPortal } from "react-dom"
 import dynamic from "next/dynamic"
 const DynamicPaginationMobile = dynamic(() => import("./PaginationMobile"), { ssr: false })
 
@@ -15,6 +14,7 @@ export default function Slide() {
   const ref = useRef<HTMLDivElement>(null)
   const [activeStudent, setActiveStudent] = useState(0)
   const [key, setKey] = useState(0)
+  const [slideData, setSlideData] = useState<ISection6Student[]>(section6Students)
   useEffect(() => {
     const checkScroll = () => {
       if (ref.current) {
@@ -31,13 +31,35 @@ export default function Slide() {
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll)
   }, [])
+  const modifySlideData = useCallback(() => {
+    if (window.innerWidth < 768) {
+      if (!!slideData[slideData.length - 1].name) {
+        setSlideData(prevState => {
+          return [...prevState, {
+            name: undefined,
+            quote: undefined,
+            school: undefined,
+            description: undefined,
+            img: undefined,
+            alt: undefined,
+          }]
+        })
+      }
+    } else {
+      setSlideData(prevState => {
+        return prevState.filter((item) => {
+          return !!item.name
+        })
+      })
+    }
+  }, [slideData])
   return (
     <>
       <div ref={ref} className="absolute top-16 md:top-[47%] w-[88%] md:w-auto left-1/2 -translate-x-1/2 md:-translate-y-1/2 z-20 flex flex-col md:flex-row items-start">
         <b className="font-playFairDisplay text-[5rem] leading-[0rem] md:text-8.75 font-bold text-white opacity-50 md:leading-1 -translate-y-[20%] mb-2 md:mb-0 md:mr-4">“</b>
         <article className="md:w-[30.375rem]">
           <div className="mb-6 md:mb-[1.81rem]">
-            {section6Students.map((item, i) => {
+            {slideData.map((item, i) => {
               if (activeStudent === i) {
                 return (
                   <div key={item.name}>
@@ -73,7 +95,8 @@ export default function Slide() {
         onActiveIndexChange={(swiper) => {
           setActiveStudent(swiper.activeIndex)
         }}
-
+        onResize={modifySlideData}
+        onAfterInit={modifySlideData}
         breakpoints={{
           769: {
             slidesPerView: "auto",
@@ -82,10 +105,10 @@ export default function Slide() {
         }}
         modules={[Pagination]}
       >
-        {section6Students.map(item => {
+        {slideData.map(item => {
           return (
             <SwiperSlide key={item.name}>
-              <Image src={item.img} alt={item.alt} className="section-6-image-slide" />
+              {item.img && <Image src={item.img} alt={item.alt!} className="section-6-image-slide" />}
             </SwiperSlide>
           )
         })}
@@ -94,8 +117,7 @@ export default function Slide() {
           <SwiperNextButton />
         </div>
         <DynamicPaginationMobile />
-      </Swiper>
-
+      </Swiper >
     </>
   )
 }

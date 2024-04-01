@@ -4,13 +4,13 @@ import student3 from "@/assets/image/home/student-3.png";
 import student4 from "@/assets/image/home/student-4.png";
 import { StaticImageData } from "next/image";
 
-interface ISection6Student {
-  name: string;
-  quote: string;
-  school: string;
-  description: string;
-  img: StaticImageData | string;
-  alt: string;
+export interface ISection6Student {
+  name: string | undefined;
+  quote: string | undefined;
+  school: string | undefined;
+  description: string | undefined;
+  img: StaticImageData | string | undefined;
+  alt: string | undefined;
 }
 
 export const section6Students: ISection6Student[] = [
