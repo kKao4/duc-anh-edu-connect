@@ -8,6 +8,8 @@ import SwiperPrevButton from "./SwiperPrevButton"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { createPortal } from "react-dom"
+import dynamic from "next/dynamic"
+const DynamicPaginationMobile = dynamic(() => import("./PaginationMobile"), { ssr: false })
 
 export default function Slide() {
   const ref = useRef<HTMLDivElement>(null)
@@ -91,7 +93,7 @@ export default function Slide() {
           <SwiperPrevButton />
           <SwiperNextButton />
         </div>
-        {createPortal(<div className="section-6-pagination" />, document.getElementById("section-6-slide-pagination-container") ?? document.body)}
+        <DynamicPaginationMobile />
       </Swiper>
 
     </>
