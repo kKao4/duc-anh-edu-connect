@@ -23,7 +23,7 @@ export default function Section4() {
       <div className="relative w-full h-[48rem] block md:hidden">
         {/* bg mobile */}
         <Image src={section4BackgroundMobile} alt="dịch vụ tại Đức Anh" className="absolute bottom-0 left-0 w-screen h-[38.375rem] object-cover" />
-        <div className="mx-auto w-[92%] absolute left-1/2 -translate-x-1/2 grid grid-cols-2 gap-x-3 my-6 overflow-x-visible z-20 transition-500">
+        <div id="mobile-tabs-container" className="mx-auto w-[92%] absolute left-1/2 -translate-x-1/2 grid grid-cols-2 gap-x-3 my-6 overflow-x-visible z-20 transition-500">
           <MobileTabs />
         </div>
       </div>

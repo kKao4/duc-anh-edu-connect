@@ -34,7 +34,7 @@ export const section6Students: ISection6Student[] = [
     name: "Lê Minh",
     quote: "Em tin rằng tất cả mọi người có thể làm được giống em",
     school: "Cựu học sinh Amsterdam",
-    description: "Học bổng toàn phần trường Deakin University ",
+    description: "Học bổng toàn phần trường Deakin University Học bổng toàn phần trường Deakin University Học bổng toàn phần trường Deakin University",
     img: student2,
     alt: "",
   },

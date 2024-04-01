@@ -7,6 +7,7 @@ import SwiperNextButton from "./SwiperNextButton"
 import SwiperPrevButton from "./SwiperPrevButton"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { createPortal } from "react-dom"
 
 export default function Slide() {
   const ref = useRef<HTMLDivElement>(null)
@@ -32,23 +33,28 @@ export default function Slide() {
     <>
       <div ref={ref} className="absolute top-16 md:top-[47%] w-[88%] md:w-auto left-1/2 -translate-x-1/2 md:-translate-y-1/2 z-20 flex flex-col md:flex-row items-start">
         <b className="font-playFairDisplay text-[5rem] leading-[0rem] md:text-8.75 font-bold text-white opacity-50 md:leading-1 -translate-y-[20%] mb-2 md:mb-0 md:mr-4">“</b>
-        {section6Students.map((item, i) => {
-          if (activeStudent === i) {
-            return (
-              <article key={item.name} className="md:w-[30.375rem]">
-                <h2 className="text-1.5 md:text-2 font-extrabold leading-1.3 -tracking-0.02 text-white mb-2 md:mb-5">{item.quote}</h2>
-                <strong className="text-white text-1 md:text-1.25 font-bold leading-1.2 -tracking-0.01313 md:-translate-x-3.5 block mb-2">- {item.name}</strong>
-                <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5">{item.school}</p>
-                <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5 mb-11 md:mb-[1.81rem]">{item.description}</p>
-                <div className="flex flex-row items-center">
-                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 bg-white text-primary-40 text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] md:border-2 border-primary-20 hover-opacity transition-500 mr-[0.81rem]">Xem chi tiết</button>
-                  <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 border md:border-2 border-white text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] text-white hover:bg-white hover:text-primary-40 transition-500 hover:border-primary-20">Tất cả học sinh</button>
-                </div>
-              </article>
-            )
-          }
-          return null
-        })}
+        <article className="md:w-[30.375rem]">
+          <div className="mb-6 md:mb-[1.81rem]">
+            {section6Students.map((item, i) => {
+              if (activeStudent === i) {
+                return (
+                  <div key={item.name}>
+                    <h2 className="text-1.5 md:text-2 font-extrabold leading-1.3 -tracking-0.02 text-white mb-2 md:mb-5">{item.quote}</h2>
+                    <strong className="text-white text-1 md:text-1.25 font-bold leading-1.2 -tracking-0.01313 md:-translate-x-3.5 block mb-2">- {item.name}</strong>
+                    <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5">{item.school}</p>
+                    <p className="md:w-3/4 text-white text-0.875 md:text-1 leading-1.5 line-clamp-2 mb-1">{item.description}</p>
+                  </div>
+                )
+              }
+              return null
+            })}
+            <div id="section-6-slide-pagination-container" className="flex flex-col items-center"></div>
+          </div>
+          <div className="flex flex-row items-center">
+            <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 bg-white text-primary-40 text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] md:border-2 border-primary-20 hover-opacity transition-500 mr-[0.81rem]">Xem chi tiết</button>
+            <button className="basis-1/2 md:basis-auto md:px-[1.88rem] h-10 md:h-12 border md:border-2 border-white text-0.875 font-bold leading-1 tracking-0.01313 md:uppercase rounded-lg md:rounded-[0.625rem] text-white hover:bg-white hover:text-primary-40 transition-500 hover:border-primary-20">Tất cả học sinh</button>
+          </div>
+        </article>
       </div>
 
       <Swiper
@@ -85,7 +91,7 @@ export default function Slide() {
           <SwiperPrevButton />
           <SwiperNextButton />
         </div>
-        <div className="section-6-pagination" />
+        {createPortal(<div className="section-6-pagination" />, document.getElementById("section-6-slide-pagination-container") ?? document.body)}
       </Swiper>
 
     </>

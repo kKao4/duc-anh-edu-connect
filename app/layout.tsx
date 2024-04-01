@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vn" className={plusJakartaSans.variable + " " + playfairDisplay.variable}>
-      <body className="font-plusJakartaSans overflow-x-hidden">
+      <body className="font-plusJakartaSans overflow-x-hidden" suppressHydrationWarning>
         <Header />
         {children}
         <Footer />

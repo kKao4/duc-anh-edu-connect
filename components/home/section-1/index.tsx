@@ -19,19 +19,19 @@ export default function Section1() {
       {/* menu mobile */}
       <div className="my-8 mobile-width flex md:hidden flex-row py-3 bg-white rounded-xl shadow-section-1">
         <Link href="/" className="flex flex-col w-1/4">
-          <Image src={youtubeLearning} alt="Việc làm" className="mx-auto mb-4x" />
+          <Image src={youtubeLearning} alt="Việc làm" className="mx-auto mb-4" />
           <span className="text-0.75 font-semibold leading-1.5 tracking-0.00375 text-primary-70 text-center">Việc làm</span>
         </Link>
         <Link href="/" className="flex flex-col w-1/4">
-          <Image src={youtubeLearning} alt="Định cư" className="mx-auto mb-4x" />
+          <Image src={youtubeLearning} alt="Định cư" className="mx-auto mb-4" />
           <span className="text-0.75 font-semibold leading-1.5 tracking-0.00375 text-primary-70 text-center">Định cư</span>
         </Link>
         <Link href="/" className="flex flex-col w-1/4">
-          <Image src={youtubeLearning} alt="E-learning" className="mx-auto mb-4x" />
+          <Image src={youtubeLearning} alt="E-learning" className="mx-auto mb-4" />
           <span className="text-0.75 font-semibold leading-1.5 tracking-0.00375 text-primary-70 text-center">E-learning</span>
         </Link>
         <Link href="/" className="flex flex-col w-1/4">
-          <Image src={youtubeLearning} alt="Blog" className="mx-auto mb-4x" />
+          <Image src={youtubeLearning} alt="Blog" className="mx-auto mb-4" />
           <span className="text-0.75 font-semibold leading-1.5 tracking-0.00375 text-primary-70 text-center">Blog</span>
         </Link>
       </div>
